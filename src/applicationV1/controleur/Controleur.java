@@ -139,22 +139,5 @@ public class Controleur implements Initializable {
         this.slideLoup.valueProperty().addListener((observable, oldValue, newValue) -> Loup.setReproduction(this.slideLoup.getValue()));
         this.slideMouton.valueProperty().addListener((observable, oldValue, newValue) -> Mouton.setReproduction(this.slideMouton.getValue()));
 
-        this.e.getActeurs().addListener((InvalidationListener) c -> {
-            while (c.) {
-                /*if (c.wasRemoved()) {
-                    for (int i = 0; i < this.e.getActeurs().size(); i++) {
-                        panDeJeu.getChildren().remove(i);
-                        e.getActeurs().remove(i);
-                    }
-                }*/
-                if (c.wasAdded()==true) {
-                    for (int i = 0; i < this.e.getActeurs().size(); i++) {
-                        if (panDeJeu.lookup("#" + e.getActeurs().get(i).getId()) != null) {
-                            creerSprite(e.getActeurs().get(i));
-                        }
-                    }
-                }
-            }
-        });
     }
 }
